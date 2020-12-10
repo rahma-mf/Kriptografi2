@@ -2,5 +2,9 @@
 *.rda
 *.txt
 *.docs
+*.doc
 *.pptx
+*.ppt
 *.xlsx
+*.xls
+*.pdf
