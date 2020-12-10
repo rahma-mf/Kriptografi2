@@ -29,44 +29,7 @@ $data = mysqli_fetch_array($query);
   </head>
   <body class="sidebar-mini fixed">
     <div class="wrapper">
-      <header class="main-header hidden-print"><a class="logo" href="index.php" style="font-size:13pt">PT. Semanta Mulia Transport</a>
-        <nav class="navbar navbar-static-top">
-          <a class="sidebar-toggle" href="#" data-toggle="offcanvas"></a>
-          <div class="navbar-custom-menu">
-            <ul class="top-nav">
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-lg"></i></a>
-                <ul class="dropdown-menu settings-menu">
-                  <li><a href="logout.php"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <aside class="main-sidebar hidden-print">
-        <section class="sidebar">
-          <div class="user-panel">
-            <div class="pull-left image"><img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image"></div>
-            <div class="pull-left info">
-              <p style="margin-top:-5px;"><?php echo $data['fullname']; ?></p>
-              <p class="designation"><?php echo $data['job_title']; ?></p>
-              <p class="designation" style="font-size:6pt;">Aktivitas Terakhir: <?php echo $data['last_activity'] ?></p>
-            </div>
-          </div>
-          <ul class="sidebar-menu">
-            <li><a href="index.php"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
-            <li class="treeview"><a href="#"><i class="fa fa-file-o"></i><span>File</span><i class="fa fa-angle-right"></i></a>
-              <ul class="treeview-menu">
-                <li><a href="encrypt.php"><i class="fa fa-circle-o"></i> Enkripsi</a></li>
-                <li><a href="decrypt.php"><i class="fa fa-circle-o"></i> Dekripsi</a></li>
-              </ul>
-            </li>
-            <li><a href="history.php"><i class="fa fa-list-alt"></i><span>Daftar List</span></a></li>
-            <li class="active"><a href="about.php"><i class="fa fa-info"></i><span>Tentang</span></a></li>
-            <li><a href="help.php"><i class="fa fa-question-circle"></i><span>Bantuan</span></a></li>
-          </ul>
-        </section>
-      </aside>
+      <?php include 'header.php'?>
       <div class="content-wrapper">
         <div class="page-title">
           <div>
@@ -84,10 +47,14 @@ $data = mysqli_fetch_array($query);
           <div class="col-md-12">
             <div class="card">
               <div class="card-body">
-                <legend>Aplikasi Enkripsi dan Dekripsi PT. Semanta Mulia Transport</legend>
-                <p>Di era ini teknologi semakin maju dan pesat, dimana kerahasiaan data salah satunya yang sangat penting bagi sebuah perusahaan.<br>
-                  Oleh karena itu, maka dibuatlah Aplikasi Enkripsi dan Dekripsi untuk keamanan file. <br>
-                  Aplikasi ini merupakan Aplikasi untuk menjaga kerahasiaan data-data penting di PT. Semanta Mulia Transport</p>
+                <legend>Aplikasi Kriptografi Kunci Simetris</legend>
+                <p>Kriptografi kunci simetris adalah  algoritma kriptografi yang memakai kunci sama saat proses enkripsi (proses penyandian pesan) dan proses dekripsi (proses pengembalian pesan asli). Algoritma kunci simetris dibagi ke dalam 2 bagian yaitu:
+                  <br><li>Stream Cipher (Cipher Aliran): proses enkripsi dan dekripsi dilakukan dengan cara bit per bit atau biasa disebut dengan enkripsi atau dekripsi terhadap aliran bit.
+                  <br><li>Block Cipher (Cipher Blok): proses enkripsi dan dekripsi dilakukan terhadap data yang kemudian dibagi menjadi blok-blok data terlebih dahulu lalu proses enkripsi atau dekripsi dilakukan terpisah terhadap masing-masing blok data.
+                  <br><br>Di era globalisasi saat ini, mendapatkan informasi sangatlah mudah. Setiap orang dengan mudah mendapatkan data ataupun berita yang diinginkan. Hal ini didukung dengan teknologi informasi dan komunikasi yang terus berkembang pesat dari tahun ke tahun. Akan tetapi kemudahan mendapatkan informasi juga memberikan ancaman. Beberapa ancaman yang diberikan adalah masalah tentang keamanan, kerahasiaan, dan keotentikan data. 
+                  Kerahasiaan dari data atau informasi merupakan suatu kelengkapan pelayanan yang dibuat untuk menjaga agar informasi yang tersimpan tidak dapat dibaca atau dibuka oleh pihak yang tidak berhak. Upaya dalam menjaga kerahasiaan dari data informasi tersebut sudah tercetus sejak zaman dahulu tepatnya pada zaman romawi dengan metode pergeseran huruf atau karakter dengan dasar nilai tertentu.
+                  Pada zaman modern berbasis teknologi komputer, upaya-upaya tersebut berkembang dengan menggunakan algoritma yang diciptakan oleh banyak ahli, namun hal tersebut masih saja dapat dipecahkan oleh pihak-pihak yang tidak bertanggung jawab, oleh karena itu diperlukan suatu sistem pengamanan data yang bertujuan untuk meningkatkan keamanan data, melindungi suatu data atau pesan agar tidak dibaca oleh pihak yang tidak berwenang, dan mencegah pihak yang tidak berwenang untuk menyisipkan, menghapus, ataupun merubah data. Salah satu ilmu pengamanan data yang terkenal adalah kriptografi.
+                  Oleh karena itu, maka dibuatlah Aplikasi Enkripsi dan Dekripsi untuk menjaga keamanan file  <br>
               </div>
             </div>
           </div>
